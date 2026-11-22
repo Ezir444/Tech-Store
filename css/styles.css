@@ -26,6 +26,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 24px;
+  
   
 }
 .cabecalho {
@@ -49,17 +51,18 @@ body {
 .conteudo {
   padding: 32px 0;
   display: flex;
+  
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 45%;
-  margin-bottom: 5%;
+  width: 100%;
   background-color: #ffffff;
   border: 1px solid #cbd5e1;
   border-radius: 8px;
   overflow: hidden;
+  
 }
 
 .card-imagem {
@@ -68,10 +71,17 @@ body {
   font-size: 48px;
   text-align: center;
   line-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .card-conteudo {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-titulo {
@@ -93,6 +103,7 @@ body {
   align-items: center;
   border-top: 1px solid #f1f5f9;
   padding-top: 12px;
+  margin-top: auto;
 }
 
 .card-preco {
@@ -134,9 +145,20 @@ body {
   }
 
   .card {
-    width: 40%;
-    height: 400px;
+    width: calc(50% - 12px);
   }
   
-  
+}
+
+@media(min-width: 1024px)
+{
+  .grade-produtos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: calc(50% - 12px);
+  }
 }
